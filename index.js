@@ -4,7 +4,7 @@ import {generateBro} from './generate.js';
 import express from 'express';
 import cors from 'cors';
 const app = express();
-const http = require('http');
+// import http from 'http';
 const PORT = 3000;
 
 // const server = http.createServer((req, res) => {
@@ -17,6 +17,10 @@ app.use(cors());
 
 app.get('/generate', generateBro)
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+// server.listen(PORT, () => {
+//   console.log(`Server running at http://localhost:${PORT}/`);
+// });
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
